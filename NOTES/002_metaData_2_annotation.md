@@ -19,7 +19,11 @@
 2. **by type**
 
 #### 2. Stereotype annotation
-> 1. `@Component`
+##### key points:
+- default bean id --> [ Eg Class - Abc, then id is abc.]
+
+##### anno
+> 1. `@Component` 
 
 > 2. `@Controller`
 

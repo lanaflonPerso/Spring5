@@ -1,3 +1,8 @@
+## IOC - Inversion of Control
+- Spring Inversting the control of creating object from using new operator to BeanConatiner (reflecion api.)
+- programming technique in which object coupling is bounded at **runtime**
+- DI is way to achieve IOC.
+
 ## DI - Dependency Injection
 - Class dependency chain. (class1 has a class2 has a class3 ...). Difficult to maintain if any of these class in modified.
 - hence defined these dependencies in one central location. outSurce the object creation task
@@ -7,8 +12,14 @@
 
 - So whenever a object is intialized all it dependent would also be created and injected to it by Spring Container.
 
+- example of factory in OPAC: `Business Rule`, `BatchJob`.
 
 
 
-## IOC - Inversion of Control
-- Spring Inversting the control of creating object from using new operator to BeanConatiner (reflecion api.)
+
+
+
+***
+
+### other
+#### 1. Singleton Pattern
