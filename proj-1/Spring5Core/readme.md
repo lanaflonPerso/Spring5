@@ -1,3 +1,3 @@
-## Spring Boot 2.0.5
+## Spring Boot
 
-Demo project.
+This is Spring boot 2.0.5 project
