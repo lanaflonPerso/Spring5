@@ -12,7 +12,19 @@
 #### 2. @autowire @qualifier(name="")
 - `<bean=...RequiredAnnotationBeanPostProcessor>`
 - It looks for _bean type_ and if ambigious, then looks for _bean name_
+- cant use with primitive, String, Integer,etc.
 - type:
 1. **by name**
 
 2. **by type**
+
+#### 2. Stereotype annotation
+> 1. `@Component`
+
+> 2. `@Controller`
+
+> 3. `@Repositoty`
+
+> 4. `@Service`
+
+

@@ -26,3 +26,6 @@
 #### C.1. autowire attribute
 
 #### C.2. @autowire
+
+***
+### D. method Injection
