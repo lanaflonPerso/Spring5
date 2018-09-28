@@ -2,6 +2,7 @@
 
 #### A. Resources
 1. [tutorialspoint](https://www.tutorialspoint.com/spring/spring_overview.htm)
+2. [mykong](https://www.mkyong.com/spring)
 
 ***
 
