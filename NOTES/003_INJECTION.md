@@ -34,10 +34,9 @@
 ***
 
 ### B. Strategies for Autowiring
-#### 1. autowire attribute - 5 Strategies
-> [ no, auto,type, name, contructor ]
-
-1. it autowires all properties of class ABC - o1 and o2.
+#### B.1. Autowiring in XML using autowire attribute - 
+1. 5 Strategies -> [ no, auto,type, name, contructor ]
+2. it autowires all properties of class ABC - o1 and o2.
 ```
 class ABC{
     Object1 o1;
@@ -47,10 +46,9 @@ class ABC{
 < bean class="ABC" autowire="name"/> // o1 and o2 both get autowired.
 ```
 
-#### 2. @autowire - 2  Strategies
-> [type, name]
-
-1. we can restrict autowiring to specific property.
+#### B.2. Autowiring usng @autowire anno - 
+1. 2 Strategies -> [type, name]
+2. we can restrict autowiring to specific property.
 ```
 @autowire 
 Object1 o1;
