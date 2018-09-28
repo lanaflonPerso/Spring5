@@ -30,19 +30,27 @@
 
 1. Data Access/Integration
 > `JBDC` - JDBC-abstraction layer that removes the need for tedious JDBC related coding
+
 > `ORM` - Support to JPA and Hibernate framework.
+
 > `JMS` - features for producing and consuming messages.
+
 > `Transaction` - programmatic and declarative transaction management
 
 2. Core Modules  
 > `core` - IoC and Dependency Injection features
+
 > `Bean` - BeanFactory
+
 > `Context`  - ApplicationContext
+
 > `SpEL` - powerful expression language for querying and manipulating an object graph at runtime.
 
 3. web
 > `web-MVC` - Spring MVC for webapp.
+
 > `web, portlet, websocket,etc` - ?
+
 
 4. Test
 > Junits
