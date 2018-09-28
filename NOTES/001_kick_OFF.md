@@ -10,16 +10,20 @@
 2. Application developed using POJOs, no EJB needed. Lightweight IoC containers compared to EJB Container.
 3. Servlet Container Analogy.
 
+***
+
 #### C. Core Feature 
 ##### C.1. DI / IOC
 1. Loosely coupled code.
 2. Class A and Class B - dependency exmaple.
 3. Factory Design pattern.
 
-***
+
 
 ##### C.2. AOP
 1. cross-cutting concerns (logging, transactions, security, caching, metric, etc) --> separate from the application's business logic
+
+***
 
 #### D. Framework of frameworks
 - Spring provides multiple Modules.
