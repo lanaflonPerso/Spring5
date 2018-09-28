@@ -1,5 +1,6 @@
 ## Injection
-- Inject primitive type, object, collection
+- Inject primitive type, object, collection (List,Map,Set).
+- Spring Context is also responsible for injection dependencies in the bean, either through `setter` or `constructor` or `autowiring`.
 
 ***
 
@@ -10,9 +11,7 @@
 
 > `idref` - to inject object type by bean id.
 
-> 'value' - to inject primitive type.
-
-
+> `value` - to inject primitive type.
 
 ***
 ### B. Constructor Injection

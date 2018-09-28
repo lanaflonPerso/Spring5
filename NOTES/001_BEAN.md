@@ -4,16 +4,16 @@
 - create alias of Bean : 
 `<alias name="id of bean" alias-name="new name">`
 
-- `<Bean>`
-> `id`
+- `<Bean>` attributes
+> 1. `id`
 
-> `class`
+> 2. `class`
 
-> `scope`
+> 3. `scope`
 
-> `name` and `alias-name`
+> 4. `name` and `alias-name`
 
-> `parent` - to inherit bean definiton from abstract bean template.
+> 5. `parent` - to inherit bean definiton from abstract bean template.
 
 ***
 
@@ -22,8 +22,7 @@
 
 #### 2. Singleton (default)
 
-Note : 3 more only for web appication:
-
+`Note` : 3 more types, only for web appication:
 #### 3. Request
 - new Bean per http request
 
@@ -37,7 +36,30 @@ Note : 3 more only for web appication:
 ### B. LIFE-CYCLE of a Bean:
 
 ***
-### C. Bean Aware:
+
+### C. Callback Life cycle method
+- Sometimes we want to initialize resources in the bean classes - initialize services, database connections,etc before initialization of bean.
+- Spring different ways of post-initialization and pre-destroy in a spring bean life cycle.
+1. By implementing `InitializingBean` and `DisposableBean` interfaces. Overide:
+> `destroy()` 
+> `afterPropertiesSet()`
+
+2. Providing `init-method` and `destroy-method` attribute.
+```
+<bean name="id1" class="abc" 
+    init-method="init" destroy-method="destroy">
+```
+
+3. `@PostConstruct` and `@PreDestroy` annotations.
+```
+@PreDestroy 	public void destory(){ ... }
+@PostConstruct	public void init(){ ... }
+```
+- [detailed eg - journelDev](https://www.journaldev.com/2637/spring-bean-life-cycle#spring-bean-life-cycle)
+
+***
+
+### D. Bean Aware:
 interface which bean class implements to make itself aware about Application context, bean name, classloader,etc
 
 #### 1. ApplicationContextAware.
