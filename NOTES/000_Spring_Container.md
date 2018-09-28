@@ -20,4 +20,7 @@
 
 ***
 ### Difference between ApplicationContext and BeanFactory
+1. BF lazy loads the Singleton.
+2. AC can do everytime BF does. BF still their for backward compatibility.
+
 
