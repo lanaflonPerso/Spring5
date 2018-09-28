@@ -1,5 +1,4 @@
 ## Spring 5
-This is Spring boot 2.0.5 project
 
 ### Development environment
 
@@ -8,4 +7,6 @@ This is Spring boot 2.0.5 project
 
 
 ### Resource:
+1. [mkyong](http://www.mkyong.com/tutorials/spring-tutorials/)
+2. [baeldung](https://www.baeldung.com/spring-tutorial)
 
