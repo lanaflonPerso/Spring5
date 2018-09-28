@@ -33,3 +33,12 @@ class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 > 4. 'constructor'
 
 > 5. 'no' (default)
+
+***
+### Best Practice
+1. add `<description>` nside bean
+2. prefer id
+3. Dont specify sprinf version in schema xsd file. it automatically takes highest version.
+4. prefer setter over constructor
+5. use index and type with constructor injection.
+6. reuse Bean definition using bean tempalte and parnt attribute.
