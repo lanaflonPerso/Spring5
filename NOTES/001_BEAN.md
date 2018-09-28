@@ -1,3 +1,6 @@
+> TOPICs:   about Bean, scope, life cycle, BeanPostProcessor, BeanFactoryPostProcessor, Bean Aware
+
+
 ### About Bean
 - POJO class
 - `inner Bean` - how to create it and purpose.
@@ -34,17 +37,27 @@
 
 ***
 ### B. LIFE-CYCLE of a Bean:
+- read metadata
+- before intialization - 1
+- before intialization - 2
+- before intialization - 3
+- create object using default Constructor / constructor injection
+- inject setter dependencies
+- All BeanPostProcessor (order ?) > postProcessBeforeIntialize
+- All BeanPostProcessor (Order ?) > postProcessAfterIntialize
+
 
 ***
 
 ### C. Callback Life cycle method
-- Sometimes we want to initialize resources in the bean classes - initialize services, database connections,etc before initialization of bean.
+- Sometimes we want to initialize resources in the bean classes - initialize services, database connections, etc before initialization of bean.
 - Spring different ways of post-initialization and pre-destroy in a spring bean life cycle.
 1. By implementing `InitializingBean` and `DisposableBean` interfaces. Overide:
 > `destroy()` 
 > `afterPropertiesSet()`
 
 2. Providing `init-method` and `destroy-method` attribute.
+- use: if we want to have common init/destroy thing for multiple bean.
 ```
 <bean name="id1" class="abc" 
     init-method="init" destroy-method="destroy">
@@ -55,11 +68,39 @@
 @PreDestroy 	public void destory(){ ... }
 @PostConstruct	public void init(){ ... }
 ```
+- All three can be used together and will follow mentioned `order`.
+- AC.registerShutdownHook() - it will destroy all bean.
 - [detailed eg - journelDev](https://www.journaldev.com/2637/spring-bean-life-cycle#spring-bean-life-cycle)
 
 ***
 
-### D. Bean Aware:
+### D. BeanPostProcessor
+- After Intializing bean, spring executes it. (seperate class)
+- Add these class in spring.xml. so that spring-Container get aware of it and execute it.
+
+```
+class ABC extends BeanPostProcessor{
+@postProcessAfterIntialize( Object bean, String beanName) {}
+@postProcessBeforeIntialize( Object bean, String beanName) {}
+}
+```
+
+***
+
+
+### E. BeanFACTORYPostProcessor
+- to Override the behaviour of bean Container.
+- Seperate Class:
+```
+Class ABC implements BeanFACTORYPostProcessor{
+postProcessorBeanFactory(configurableListableBeanFactory arg) {}
+}
+```
+- Practical usage : ?
+
+***
+
+### F. Bean Aware:
 interface which bean class implements to make itself aware about Application context, bean name, classloader,etc
 
 #### 1. ApplicationContextAware.
