@@ -45,7 +45,7 @@
 
 > `Context`  - ApplicationContext
 
-> `SpEL` - powerful expression language for querying and manipulating an object graph at runtime.
+> `SpEL` - powerful expression language for querying and manipulating an object graph at runtime. - extension over EL deined in JSP like : method invocation,accessing collection,etc.
 
 3. web
 > `web-MVC` - Spring MVC for webapp.
