@@ -1,5 +1,6 @@
 ## IOC - Inversion of Control
 - Spring Inversting the control of creating object from using new operator to BeanConatiner (reflecion api.)
+- if we manually create object using new opertor inside one class > objects will get tightly coupled at compile time itself.
 - programming technique in which object coupling is bounded at **runtime**
 - DI is way to achieve IOC.
 
@@ -13,11 +14,6 @@
 - So whenever a object is intialized all it dependent would also be created and injected to it by Spring Container.
 
 - example of factory in OPAC: `Business Rule`, `BatchJob`.
-
-
-
-
-
 
 ***
 
