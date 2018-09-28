@@ -11,4 +11,4 @@
 
 
 ## IOC - Inversion of Control
-- Spring Inversting the control of creating object.
+- Spring Inversting the control of creating object from using new operator to BeanConatiner (reflecion api.)
