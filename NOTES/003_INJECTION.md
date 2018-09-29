@@ -33,8 +33,14 @@
 
 ***
 
-### B. Strategies for Autowiring
-#### B.1. Autowiring in XML using autowire attribute - 
+### B. Explicit injection
+1. `<contructor-arg>` - explicitly use it for each property
+2. `<property>` - explicitly use it for each property
+
+
+***
+### C. Strategies for Autowiring (Implicit injection)
+#### C.1. Autowiring in XML using autowire attribute - 
 1. 5 Strategies -> [ no, auto,type, name, contructor ]
 2. it autowires all properties of class ABC - o1 and o2.
 ```
@@ -46,7 +52,7 @@ class ABC{
 < bean class="ABC" autowire="name"/> // o1 and o2 both get autowired.
 ```
 
-#### B.2. Autowiring usng @autowire anno - 
+#### C.2. Autowiring usng @autowire anno - 
 1. 2 Strategies -> [type, name]
 2. we can restrict autowiring to specific property.
 ```
